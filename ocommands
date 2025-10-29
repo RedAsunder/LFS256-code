@@ -1,3 +1,9 @@
 ➜ oc adm policy add-scc-to-user anyuid system:serviceaccount:testjons:default
 clusterrole.rbac.authorization.k8s.io/system:openshift:scc:anyuid added: "default"
 
+https://www.redhat.com/en/blog/managing-sccs-in-openshift
+
+In OpenShift,
+anyuid is a Security Context Constraint (SCC) that allows pods to run with any user ID (UID) and group ID (GID). 
+This is a permissive security setting compared to the default restricted SCC, which assigns UIDs based on the user's namespace and may prevent applications from running correctly if they require a specific UID or UID 0 (root). 
+You grant this permission to a service account using the command oc adm policy add-scc-to-user anyuid -z <serviceaccount-name>. 
