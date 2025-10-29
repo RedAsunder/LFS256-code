@@ -17,3 +17,5 @@ spec:
         image: liquidreply/argocd-example-app:1
         ports:
         - containerPort: 3000 # Assuming your app runs on port 3000
+        securityContext:        #added
+          runAsNonRoot: true    #added
