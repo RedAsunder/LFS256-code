@@ -1,0 +1,30 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: ""
+    openshift.io/display-name: ""
+    openshift.io/requester: kubeadmin
+    openshift.io/sa.scc.mcs: s0:c26,c0
+    openshift.io/sa.scc.supplemental-groups: 999/10000 #changed for redis
+    openshift.io/sa.scc.uid-range: 999/10000 #changed for redis
+    security.openshift.io/MinimallySufficientPodSecurityStandard: privileged
+  creationTimestamp: "2025-10-29T14:12:55Z"
+  labels:
+    kubernetes.io/metadata.name: argocd
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/audit-version: latest
+    pod-security.kubernetes.io/warn: privileged
+    pod-security.kubernetes.io/warn-version: latest
+  name: argocd
+  resourceVersion: "66793"
+  uid: bc241b72-9ce6-4735-bb90-d4abd8b510c5
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
